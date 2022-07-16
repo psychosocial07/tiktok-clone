@@ -1,16 +1,15 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD_crE7gjmJhMCX3wyJWR7Ybjv09GhFK4o",
-  authDomain: "tiktok-clone-d88af.firebaseapp.com",
-  projectId: "tiktok-clone-d88af",
-  storageBucket: "tiktok-clone-d88af.appspot.com",
-  messagingSenderId: "173474297911",
-  appId: "1:173474297911:web:4c435d620d1f1fa3aba7b2",
-  measurementId: "G-46B6JRJSWZ"
+  apiKey: "AIzaSyAq_sEKehuK0l0sbM-J0IwtD89f8PKp13U",
+  authDomain: "tiktok-clone-6f799.firebaseapp.com",
+  projectId: "tiktok-clone-6f799",
+  storageBucket: "tiktok-clone-6f799.appspot.com",
+  messagingSenderId: "338228856272",
+  appId: "1:338228856272:web:f8e293ba66933b82b8e5d5",
+  measurementId: "G-NKKD0P5LNG"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

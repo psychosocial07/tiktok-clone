@@ -46,7 +46,7 @@ const VideoPlayer = styled.video`
 const StyleVideo = styled.div`
     position:relative;
     height:100%;
-    width:98%;
+    width:100%;
     background-color:white;
     scroll-snap-align: start;
 `;
