@@ -1,16 +1,54 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
+import VideoFooter from "./VideoFooter";
+import VideoSidebar from "./VideoSidebar";
 
-const Video = () => { 
+const Video = ({url,channel,description,song,likes,shares,messages}) => { 
+
+    const [playing,setPlaying] = useState(false);
+    const videoRef = useRef(null);
+
+    const onVideoPress = () =>
+    {
+        if(playing)
+        {
+            videoRef.current.pause();
+            setPlaying(false);
+        }
+        else
+        {
+            videoRef.current.play();
+            setPlaying(true);
+        }
+    };
+
     return (
-        <StyleVideo><h1>This is the Video</h1></StyleVideo>    
-    );
+        <StyleVideo>
+            <VideoPlayer 
+            loop
+            onClick={onVideoPress}
+            ref={videoRef}
+            src ={url}>
+            </VideoPlayer>
+            <VideoSidebar likes={likes} shares={shares} messages={messages}></VideoSidebar>
+            <VideoFooter channel={channel} description={description} song={song}></VideoFooter>
+        </StyleVideo>    
+);
 }
 
+const VideoPlayer = styled.video`
+    background-color:black;
+    object-fit:fill;
+    width:100%;
+    height:100%;
+`;
+
 const StyleVideo = styled.div`
-    color:red;
-    height:150px;
-    width:100px;
+    position:relative;
+    height:100%;
+    width:98%;
+    background-color:white;
+    scroll-snap-align: start;
 `;
 
 
